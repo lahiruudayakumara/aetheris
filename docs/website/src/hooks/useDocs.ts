@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import type { DocPage } from '../types';
 
 // Load markdown files dynamically from sibling directories using Vite glob
