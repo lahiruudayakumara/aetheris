@@ -59,6 +59,7 @@ curl http://localhost:3000/hello
 ```
 
 Response:
+
 ```json
 {
   "message": "Hello from Aetheris!"

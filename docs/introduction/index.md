@@ -13,7 +13,7 @@ Aetheris is a next-generation, cloud-native infrastructure framework built to si
 
 ## Why Aetheris?
 
-Traditional cloud-native development requires juggling Terraform, Kubernetes manifests, and application code across multiple repositories. Aetheris unifies these concerns under a single type-safe framework. 
+Traditional cloud-native development requires juggling Terraform, Kubernetes manifests, and application code across multiple repositories. Aetheris unifies these concerns under a single type-safe framework.
 
 ```typescript
 import { Service, Gateway, Database } from '@aetheris/core';

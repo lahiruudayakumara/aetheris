@@ -1,6 +1,6 @@
 # Installation Guide
 
-To begin using the Aetheris Framework, you'll need to install the CLI and package manager. 
+To begin using the Aetheris Framework, you'll need to install the CLI and package manager.
 
 ## Prerequisites
 

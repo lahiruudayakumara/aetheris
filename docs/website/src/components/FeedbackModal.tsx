@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { X, CheckCircle2 } from 'lucide-react';
 
 interface FeedbackModalProps {
   onClose: () => void;
@@ -27,10 +28,14 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({ onClose }) => {
   return (
     <div className="modal-overlay animate-fade-in">
       <div className="modal-card">
-        <button className="modal-close-btn" onClick={onClose}>×</button>
+        <button className="modal-close-btn" onClick={onClose} aria-label="Close modal">
+          <X size={20} />
+        </button>
         {formSubmitted ? (
-          <div className="form-success-message">
-            <div className="form-success-icon">✓</div>
+          <div className="form-success-message flex flex-col items-center text-center gap-4">
+            <div className="form-success-icon">
+              <CheckCircle2 size={40} className="text-accent-secondary animate-pulse" />
+            </div>
             <h3 className="modal-title">Feedback Submitted!</h3>
             <p className="modal-subtitle">Thank you for helping us improve Aetheris. Your suggestion has been recorded.</p>
           </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Copy, Check } from 'lucide-react';
 
 interface CopyButtonProps {
   text: string;
@@ -14,8 +15,18 @@ export const CopyButton: React.FC<CopyButtonProps> = ({ text }) => {
   };
 
   return (
-    <button className="copy-btn" onClick={handleCopy}>
-      {copied ? 'Copied!' : 'Copy'}
+    <button className="copy-btn flex items-center gap-1.5" onClick={handleCopy} aria-label="Copy code">
+      {copied ? (
+        <>
+          <Check size={14} className="text-accent-secondary" />
+          <span>Copied</span>
+        </>
+      ) : (
+        <>
+          <Copy size={14} />
+          <span>Copy</span>
+        </>
+      )}
     </button>
   );
 };

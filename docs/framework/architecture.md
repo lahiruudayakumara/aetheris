@@ -18,6 +18,7 @@ graph TD
 ## Architectural Advantages: Aetheris vs. Traditional Serverless
 
 Traditional serverless architectures (like AWS Lambda or standard API Gateway stacks) suffer from several architectural constraints:
+
 1. **Cold-Starts (MicroVM Boot Time)**: Container or runtime initialization delays.
 2. **Network Multi-Hops**: Gateway routing to internal load balancers, then into function runtimes, adding latency.
 3. **Database Connection Exhaustion**: Stateless scales opening new database pools concurrently.
@@ -39,20 +40,27 @@ Aetheris bypasses these limitations using the following next-generation patterns
 The lifecycle of an Aetheris stack follows a highly optimized compile-time pipeline:
 
 ### 1. Abstract Syntax Tree (AST) Parsing
+
 The Aetheris static analyzer parses your code configuration using language-specific compiler APIs. It generates a dependency graph mapping connections, variables, and handler scopes.
+
 - **Auto-IAM Synthesis**: The compiler scans function code to detect exact data-access operations (e.g. `db.write()`). It automatically generates precise, minimal privilege IAM policies, eliminating manual configuration error.
 
 ### 2. Provider-Agnostic Intermediate Representation (IR)
+
 The parsed graph is normalized into a schema describing the topology. The IR captures:
+
 - Compute definitions (memory allocations, language runtimes).
 - Network pathways (Gateways, private subnets, edge routes).
 - Storage configurations (NoSQL models, relational backends).
 
 ### 3. Zero-Hop Network Mapping
+
 Unlike traditional gateways that route requests through multiple layers, the Aetheris compiler optimizes network layouts at build time. For Kubernetes targets, it generates sidecar-free network topologies. For AWS, it compiles handlers directly into API listener boundaries, shortening the request path.
 
 ### 4. Engine Code Generation
+
 The optimized IR compiles into cloud-native targets:
+
 - **AWS Stacks**: Compiles to CloudFormation with pre-compiled native AWS Lambda runtimes and custom SnapStart snapshots.
 - **Kubernetes**: Generates high-efficiency Envoy meshes, minimal custom-built handler containers, and optimized sidecar configurations.
 
