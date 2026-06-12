@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { highlightCode } from '../components/MarkdownRenderer';
-import { Star, Check, BookOpen, Github, MessageSquare } from 'lucide-react';
+import { Check, BookOpen, Github, MessageSquare } from 'lucide-react';
 
 interface HomeProps {
   onNavigateToDocs: () => void;
@@ -49,12 +49,6 @@ public class Functions {
 
   return (
     <div className="landing-container animate-fade-in">
-      {/* Tailwind v4 Verification Banner */}
-      <div className="bg-accent-primary text-text-primary text-center py-2 text-sm font-semibold tracking-wide flex items-center justify-center gap-2">
-        <Star size={14} className="animate-spin" />
-        <span>Tailwind v4 Compile Engine Active</span>
-        <Star size={14} className="animate-spin" />
-      </div>
       {/* Hero */}
       <section className="hero-section">
         <div className="hero-left">
