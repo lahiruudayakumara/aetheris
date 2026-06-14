@@ -1,10 +1,8 @@
 name: CI
 
 on:
-  pull_request:
   push:
-    branches:
-      - main
+  pull_request:
 
 permissions:
   contents: read
@@ -55,3 +53,42 @@ jobs:
 
       - name: Validate workflow files
         uses: rhysd/actionlint@v1.7.12
+
+  test:
+    name: Build & Typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_ENV"
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build codebase
+        run: pnpm run build
+
+      - name: Run typechecks
+        run: pnpm run typecheck

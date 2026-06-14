@@ -1,0 +1,19 @@
+{
+  "name": "@aetheris/cli",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "bin": {
+    "aetheris": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@aetheris/core": "workspace:^",
+    "@aetheris/compiler": "workspace:^"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "@types/node": "^22.0.0"
+  }
+}
