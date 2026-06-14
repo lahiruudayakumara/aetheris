@@ -1,9 +1,10 @@
-# <p align="center"><img src="docs/logo.png" alt="Aetheris Logo" width="500" /></p>
+<p align="center"><img src="docs/logo.png" alt="Aetheris Logo" width="200" />
+</p>
 
-# <p align="center">Aetheris Framework</p>
+<h1 align="center">Aetheris</h1>
 
 <p align="center">
-  <strong>Industry-Grade Cloud-Native & Microservice Application Framework for AWS</strong>
+  <strong>Build, Emulate, and Deploy Cloud-Native Applications on AWS Using Code-First Infrastructure</strong>
 </p>
 
 <p align="center">
@@ -45,7 +46,6 @@
   <img src="https://img.shields.io/badge/packageManager-pnpm-34495e?style=flat-square&logo=pnpm&logoColor=white" alt="pnpm" />
   <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square" alt="PRs Welcome" />
 </p>
-
 
 ---
 
@@ -116,6 +116,7 @@ Aetheris compiles your language-native infrastructure graphs into optimized, pro
 Here is how you can write identical infrastructure topologies across different languages:
 
 ### TypeScript / Node.js
+
 ```typescript
 import { Gateway, Database, Service, WebSocket } from '@aetheris/core';
 
@@ -130,6 +131,7 @@ export { gateway, userDb, authService, wsServer };
 ```
 
 ### Go (Golang)
+
 ```go
 package main
 import "aetheris"
@@ -148,6 +150,7 @@ func main() {
 ```
 
 ### Python
+
 ```python
 import aetheris
 
@@ -167,6 +170,7 @@ if __name__ == "__main__":
 ```
 
 ### C# (.NET 8)
+
 ```csharp
 using Aetheris;
 
@@ -192,25 +196,32 @@ class Program
 ## 🛠️ Quick Start
 
 ### 1. Build Workspace Dependencies
+
 Prepare compiler scripts and monorepo workspace dependencies:
+
 ```bash
 pnpm install
 pnpm run build
 ```
 
 ### 2. Run Monolithic or Microservice Examples
+
 Launch the local development gateway and compilers concurrently:
 
 * **For Monolithic Examples**:
+
   ```bash
   pnpm run dev:monolithic
   ```
+
 * **For Microservices Examples**:
+
   ```bash
   pnpm run dev:microservices
   ```
 
 This starts parallel development compilers with hot-reload monitoring:
+
 * **API Gateway Port**: `http://localhost:3000`
 * **API Console / Developer Hub**: `http://localhost:3000/docs`
 * **WebSocket Emulation Port**: `ws://localhost:3001`
@@ -233,14 +244,14 @@ The Aetheris CLI (`aetheris`) simplifies workspace management:
 As Aetheris matures, we plan to expand framework capabilities, AWS service integrations, and emulation fidelity. Key focus areas include:
 
 1. **Expanded AWS Service Coverage**:
-   - Native constructs for **Amazon S3** buckets, **Amazon Cognito** user pools, **Amazon EventBridge** event buses, **Amazon SQS** queues, **Amazon SNS** topics, **AWS Step Functions**, **Amazon CloudFront** distributions, custom **VPC** topologies, **Route53** records, and **Amazon OpenSearch**.
+   * Native constructs for **Amazon S3** buckets, **Amazon Cognito** user pools, **Amazon EventBridge** event buses, **Amazon SQS** queues, **Amazon SNS** topics, **AWS Step Functions**, **Amazon CloudFront** distributions, custom **VPC** topologies, **Route53** records, and **Amazon OpenSearch**.
 2. **Robust Infrastructure State Management**:
-   - Secure state locking, drift detection, and remote state storage backend integrations (similar to S3 state stores with DynamoDB locking).
+   * Secure state locking, drift detection, and remote state storage backend integrations (similar to S3 state stores with DynamoDB locking).
 3. **Advanced MicroVM Emulation**:
-   - Transition local execution from process isolation to microVM-based isolation (e.g. Firecracker) to perfectly simulate AWS Lambda cold-starts and environment configurations.
+   * Transition local execution from process isolation to microVM-based isolation (e.g. Firecracker) to perfectly simulate AWS Lambda cold-starts and environment configurations.
 4. **Enhanced SDK Feature Parity**:
-   - Continuous improvement of the TypeScript, Go, Python, and C# SDK signatures to guarantee 100% identical deployment patterns.
-   - Dynamic least-privilege IAM policy and role compilation based on static analysis of source file system and network calls.
+   * Continuous improvement of the TypeScript, Go, Python, and C# SDK signatures to guarantee 100% identical deployment patterns.
+   * Dynamic least-privilege IAM policy and role compilation based on static analysis of source file system and network calls.
 
 ---
 
