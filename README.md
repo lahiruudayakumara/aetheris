@@ -1,51 +1,14 @@
-<p align="center"><img src="docs/logo.png" alt="Aetheris Logo" width="200" />
-</p>
+# Aetheris
 
-<h1 align="center">Aetheris</h1>
+![Aetheris Logo](docs/logo.png)
 
-<p align="center">
-  <strong>Build, Emulate, and Deploy Cloud-Native Applications on AWS Using Code-First Infrastructure</strong>
-</p>
+Build, Emulate, and Deploy Cloud-Native Applications on AWS Using Code-First Infrastructure
 
-<p align="center">
-  <a href="https://github.com/DreamGen-Labs/aetheris/actions/workflows/ci.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/DreamGen-Labs/aetheris/ci.yml?branch=main&style=flat-square&logo=github-actions&logoColor=white&label=CI%20Status" alt="CI Status" />
-  </a>
-  <a href="https://github.com/DreamGen-Labs/aetheris/releases">
-    <img src="https://img.shields.io/github/v/release/DreamGen-Labs/aetheris?style=flat-square&logo=github&logoColor=white&color=blue" alt="Latest Release" />
-  </a>
-  <a href="https://github.com/DreamGen-Labs/aetheris/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/DreamGen-Labs/aetheris?style=flat-square&logo=apache&logoColor=white&color=orange" alt="License" />
-  </a>
-  <a href="https://github.com/DreamGen-Labs/aetheris/actions/workflows/deploy-pages.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/DreamGen-Labs/aetheris/deploy-pages.yml?branch=main&style=flat-square&logo=github-actions&logoColor=white&label=Docs" alt="Docs Deploy Status" />
-  </a>
-</p>
+[![CI Status](https://img.shields.io/github/actions/workflow/status/DreamGen-Labs/aetheris/ci.yml?branch=main&style=flat-square&logo=github-actions&logoColor=white&label=CI%20Status)](https://github.com/DreamGen-Labs/aetheris/actions/workflows/ci.yml) [![Latest Release](https://img.shields.io/github/v/release/DreamGen-Labs/aetheris?style=flat-square&logo=github&logoColor=white&color=blue)](https://github.com/DreamGen-Labs/aetheris/releases) [![License](https://img.shields.io/github/license/DreamGen-Labs/aetheris?style=flat-square&logo=apache&logoColor=white&color=orange)](https://github.com/DreamGen-Labs/aetheris/blob/main/LICENSE) [![Docs Deploy Status](https://img.shields.io/github/actions/workflow/status/DreamGen-Labs/aetheris/deploy-pages.yml?branch=main&style=flat-square&logo=github-actions&logoColor=white&label=Docs)](https://github.com/DreamGen-Labs/aetheris/actions/workflows/deploy-pages.yml)
 
-<p align="center">
-  <a href="https://github.com/DreamGen-Labs/aetheris/stargazers">
-    <img src="https://img.shields.io/github/stars/DreamGen-Labs/aetheris?style=flat-square&logo=github&color=yellow" alt="GitHub Stars" />
-  </a>
-  <a href="https://github.com/DreamGen-Labs/aetheris/network/members">
-    <img src="https://img.shields.io/github/forks/DreamGen-Labs/aetheris?style=flat-square&logo=github&color=lightgrey" alt="GitHub Forks" />
-  </a>
-  <a href="https://github.com/DreamGen-Labs/aetheris/issues">
-    <img src="https://img.shields.io/github/issues/DreamGen-Labs/aetheris?style=flat-square&logo=github&color=red" alt="GitHub Issues" />
-  </a>
-  <a href="https://github.com/DreamGen-Labs/aetheris/pulls">
-    <img src="https://img.shields.io/github/issues-pr/DreamGen-Labs/aetheris?style=flat-square&logo=github&color=green" alt="GitHub Pull Requests" />
-  </a>
-</p>
+[![GitHub Stars](https://img.shields.io/github/stars/DreamGen-Labs/aetheris?style=flat-square&logo=github&color=yellow)](https://github.com/DreamGen-Labs/aetheris/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/DreamGen-Labs/aetheris?style=flat-square&logo=github&color=lightgrey)](https://github.com/DreamGen-Labs/aetheris/network/members) [![GitHub Issues](https://img.shields.io/github/issues/DreamGen-Labs/aetheris?style=flat-square&logo=github&color=red)](https://github.com/DreamGen-Labs/aetheris/issues) [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/DreamGen-Labs/aetheris?style=flat-square&logo=github&color=green)](https://github.com/DreamGen-Labs/aetheris/pulls)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" alt="C#" />
-  <img src="https://img.shields.io/badge/AWS-Supported-FF9900?style=flat-square&logo=amazon-aws&logoColor=white" alt="AWS Supported" />
-  <img src="https://img.shields.io/badge/packageManager-pnpm-34495e?style=flat-square&logo=pnpm&logoColor=white" alt="pnpm" />
-  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square" alt="PRs Welcome" />
-</p>
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white) ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white) ![AWS Supported](https://img.shields.io/badge/AWS-Supported-FF9900?style=flat-square&logo=amazon-aws&logoColor=white) ![pnpm](https://img.shields.io/badge/packageManager-pnpm-34495e?style=flat-square&logo=pnpm&logoColor=white) ![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square)
 
 ---
 
